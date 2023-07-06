@@ -11,19 +11,13 @@ A: 账号: admin 密码: simple-admin
 
 ## 注册的账号不能登录?
 
-A: 默认注册成功后的角色是会员，没有登录的权限。你需要修改角色权限或者将用户的角色设置为管理员.
-
-::: info
-新版本已支持配置默认注册用户的角色部门以及职位， 通过 ProjectConf 控制
-
+A: 可以登录，注册成功后的角色、部门、职位，由core模块配置文件决定。
 ```yaml
 ProjectConf:
-  DefaultRoleId: 2
-  DefaultDepartmentId: 1
-  DefaultPositionId: 1
+  DefaultRoleId: 1  # default role id when register
+  DefaultDepartmentId: 1  # default department id when register
+  DefaultPositionId: 1 # default position id when register
 ```
-
-:::
 
 ## go-zero 有几种服务注册发现方式？
 
